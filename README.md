@@ -30,7 +30,7 @@ All site asset paths are relative, so the site works under a GitHub project URL.
 
 ## Review status
 
-The visible development notice is intentional. Geometry was extracted from the district's georeferenced Option C / Model C-1a PDF (August 14, 2026 revision). School paths follow the supplied reassignment table. Final adoption, student exceptions, and address accuracy still need district validation. The 25-meter near-edge warning is a conservative review threshold, not an accuracy guarantee. The additional KML files have not replaced the grid geometry.
+Geometry was extracted from the district's georeferenced Option C / Model C-1a PDF (August 14, 2026 revision). School paths follow the supplied reassignment table. Final adoption, student exceptions, and address accuracy still need district validation. The 25-meter near-edge warning is a conservative review threshold, not an accuracy guarantee. The additional KML files have not replaced the grid geometry.
 
 Source PDF: https://resources.finalsite.net/images/v1787087284/susdorg/ochdjowa1vhsiiacxjil/OptionCBoundaryModelC-1a.pdf
 

@@ -47,8 +47,10 @@ async function search(event){
   const response=await fetch(url,{signal:abort.signal});if(!response.ok)throw Error('Address service unavailable');const json=await response.json();if(serial!==request)return;
   const matches=(json.candidates||[]).filter(c=>c.score>=90&&['PointAddress','StreetAddress','Subaddress'].includes(c.attributes?.Addr_type));
   if(!matches.length){status('No precise street-address match. Add the city and ZIP, or select your location on the map.');return;}
-  status('Confirm the matched address below before viewing its school path.');
-  for(const candidate of matches){const button=document.createElement('button');button.className='candidate';button.textContent=candidate.address+' →';button.addEventListener('click',()=>{cancel();$('address').value=candidate.address;choosePoint(candidate.location.x,candidate.location.y,'Matched address: '+candidate.address);map.setView([candidate.location.y,candidate.location.x],15);status('Address match selected. Check the map marker is on the correct property.');});$('candidates').append(button);}
+  status('');
+  $('search-status').className='status confirm-address';
+  $('search-status').innerHTML='<strong>Confirm your address</strong><span>One more step: check the address below, then select <b>Use this address</b> to see your schools.</span>';
+  for(const candidate of matches){const button=document.createElement('button');button.className='candidate';button.innerHTML='<span class="candidate-address">'+esc(candidate.address)+'</span><span class="candidate-action">Use this address <span aria-hidden="true">→</span></span>';button.setAttribute('aria-label','Use this address: '+candidate.address);button.addEventListener('click',()=>{cancel();$('address').value=candidate.address;choosePoint(candidate.location.x,candidate.location.y,'Matched address: '+candidate.address);map.setView([candidate.location.y,candidate.location.x],15);status('Address match selected. Check the map marker is on the correct property.');});$('candidates').append(button);}
  }catch(error){if(serial===request)status(error.name==='AbortError'?'Address search timed out. Try again, choose a grid, or use the map.':'Address search is unavailable. You can still choose a grid or click the map.');}
  finally{clearTimeout(timer);if(serial===request)$('search-button').disabled=false;}
 }

@@ -8,8 +8,6 @@
 body{background-color:var(--paper);background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22240%22%20height%3D%22208%22%20viewBox%3D%220%200%20240%20208%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23008294%22%20stroke-opacity%3D%22.10%22%20stroke-width%3D%221%22%3E%3Cpath%20d%3D%22M0%200h80l40%2069-40%2070H0l40-70Zm80%200v46l40%2023%2040-23V0m-40%2069v70l40%2023%2040-23V69l-40-23m40%2023%2040-23V0M0%20139l40%2023v46m40-69v46l40%2023%2040-46m40-23%2040%2023m-80%200v46m40-69%2040-70M0%200l40%2023%2040-23M0%2069l40-46m0%20139%2040-23M200%20208v-23l40-23%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"); background-size:240px 208px;background-repeat:repeat;color:#253746}
 header{border-bottom:0;padding-top:18px;padding-bottom:18px}.brand{color:var(--ink)}
 .badge{color:var(--ink);background:#eaf7f8;border-color:#c5e1e4}
-.development-notice{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;background:#ffe080;border-bottom:1px solid #e5c65e;padding:12px 24px;text-align:center;font-size:12px;color:#123f55}
-.development-notice strong{font-size:11px;letter-spacing:1px}
 main{padding-top:28px;padding-bottom:30px;max-width:1500px}
 .intro{background:#123f55;color:white;border-top:8px solid #008294;border-radius:12px;padding:30px 32px;text-align:center;box-shadow:0 3px 12px #123f5512;margin-bottom:26px}
 .intro .eyebrow{color:#bde9eb;font-size:12px;letter-spacing:1.6px}
@@ -29,10 +27,18 @@ button{border-radius:6px}.search-row button{background:#007681;font-size:15px;pa
 main>footer{background:#ffffffeb;border:1px solid #dce3e5;border-radius:8px;padding:18px 22px;line-height:1.7}summary{color:#123f55}a{text-underline-offset:3px}
 .susd-footer{margin-top:32px}.susd-footer-top{height:26px;background:#008294;position:relative}.susd-mountain{position:absolute;width:75px;height:auto;left:50%;bottom:26px;transform:translateX(-50%);display:block;fill:#008294}.susd-footer-bottom{height:10px;background:#005963}
 @media(max-width:900px){.tool-header{margin:-20px -20px 22px;padding:18px 20px}.map-top{min-height:78px}.intro{padding:26px 22px}main>footer{padding:16px 18px}}
-@media(max-width:600px){.development-notice{gap:4px;padding:10px 18px;flex-direction:column;font-size:11px}.intro{padding:24px 18px}.intro>p{font-size:14px}.intro h1{letter-spacing:-.8px}main{padding:22px 16px 26px}.legend{font-size:11px;gap:10px}.brand{font-size:12px}.map-top strong{font-size:17px}}
+@media(max-width:600px){.intro{padding:24px 18px}.intro>p{font-size:14px}.intro h1{letter-spacing:-.8px}main{padding:22px 16px 26px}.legend{font-size:11px;gap:10px}.brand{font-size:12px}.map-top strong{font-size:17px}}
 
 .school-link{color:#006773;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}.school-link:hover{color:#123f55;text-decoration-thickness:2px}.school-link span{font-size:12px;white-space:nowrap}
 
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
 .hero-logo{display:block;width:152px;max-width:45%;height:auto;margin:0 auto 22px}@media(max-width:600px){.hero-logo{width:125px;margin-bottom:18px}}
+
+/* Make the required address-confirmation step unmistakable. */
+.status.confirm-address{margin-top:22px;padding:16px 18px;background:#fff3cb;border:1px solid #e6c769;border-left:5px solid #d2a21c;border-radius:8px;color:#123f55;line-height:1.5}
+.confirm-address>strong{display:block;font-size:19px;margin-bottom:5px}.confirm-address>span{display:block;font-size:14px}
+.candidate{padding:0;margin-top:12px;background:#fff;color:#123f55;border:2px solid #007681;border-radius:8px;overflow:hidden;box-shadow:0 3px 9px #123f5512}
+.candidate-address{display:block;padding:16px 18px;font-size:16px;font-weight:700;line-height:1.5}
+.candidate-action{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;background:#007681;color:white;font-size:15px;font-weight:700}
+.candidate:hover{filter:none;border-color:#005963;background:#f4fbfb}.candidate:hover .candidate-action{background:#005963}
